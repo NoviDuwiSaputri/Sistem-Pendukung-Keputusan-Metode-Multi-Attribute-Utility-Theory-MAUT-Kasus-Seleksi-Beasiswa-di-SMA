@@ -1,0 +1,95 @@
+<?php 
+    // date_default_timezone_set("Asia/Jakarta");
+    // include "config.php";
+?>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all-min.css">
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+
+    <title></title>
+  </head>
+  <body>
+
+  <div class="wrapper">
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="">Menu 1</a>
+                    <a href="">Menu 2</a>
+                    <a href="">Menu 3</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-justify"></i>
+                        <span></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse">
+                        <a class="navbar-brand"> &nbsp; BRAND </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <!-- awal container -->
+    <div class="container">
+        
+    </div>
+    <!-- akhir container -->
+	
+    <!-- Optional JavaScript -->
+    <script defer src="assets/js/solid.js"></script>
+    <script defer src="assets/js/fontawesome.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+  </body>
+</html>

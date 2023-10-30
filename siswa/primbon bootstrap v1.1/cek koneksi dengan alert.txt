@@ -1,0 +1,8 @@
+if ($conn->connect_error) {
+   ?>
+   	<div class="alert alert-danger">
+        	KONEKSI DATABASE GAGAL, CEK PENGATURAN !
+   	</div>
+   <?php
+   exit;
+}           

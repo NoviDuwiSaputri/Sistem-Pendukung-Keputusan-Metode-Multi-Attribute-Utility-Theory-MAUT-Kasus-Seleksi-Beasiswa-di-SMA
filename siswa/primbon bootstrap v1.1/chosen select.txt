@@ -1,0 +1,32 @@
+--------------------------------------------------------------------------
+js
+--------------------------------------------------------------------------
+<script>
+      $(function() {
+        $('.chosen-select').chosen();
+      });
+</script>
+
+-----------------------------------------------------------------------
+standart
+---------------------------------------------------------------------
+<select class="chosen-select" data-placeholder="" name="">
+<option value=""></option>;
+<option value=""></option>;
+</select>
+
+--------------------------------------------------------------------
+Mengambil data dari tabel lain
+--------------------------------------------------------------------
+<select class="chosen-select" data-placeholder="" name="">
+<option value=""></option>;
+<?php
+    $sql = "SELECT * FROM nama_tabel";
+    $result = $conn->query($sql);
+    while($row = $result->fetch_assoc()) {
+?>
+    <option value="<?php echo $row['nama_field']; ?>"><?php echo $row['nama_field']; ?></option>
+<?php
+    }
+?>
+</select>

@@ -1,0 +1,13 @@
+<a class="btn btn-primary" href="?page=NAMA_PAGE&action=tambah">Tambah</a>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>JUDUL1</th>
+        <th>JUDUL2</th>
+        <th>JUDUL3</th>
+      </tr>
+    </thead>
+    <tbody>
+	<!-- letakkan proses menampilkan disini -->
+   </tbody>
+</table>
